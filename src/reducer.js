@@ -8,7 +8,10 @@ const counterReducer = (state, action) => {
     let newState = {}
 
     if (state === undefined) {
-        console.log('undefined')
+        return initialState
+    }
+
+    if (action.type === 'reset') {
         return initialState
     }
 
